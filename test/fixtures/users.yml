@@ -2,3 +2,26 @@ dom:
   name: Dom Example
   email: dom@example.com
   password_digest: <%= User.digest('password') %>
+  
+archer:
+  name: Sterling Archer
+  email: archer@example.com
+  password_digest: <%= User.digest('password') %>
+  
+dom:
+  name: Lana Kane
+  email: hands@example.com
+  password_digest: <%= User.digest('password') %>
+  
+archer:
+  name: Malloray Archer
+  email: boss@example.com
+  password_digest: <%= User.digest('password') %>
+  
+<% 30.times do |n| %>
+user_<%= n %>:
+  name: <%= "user #{n}" %>
+  email: <%= "user-#{n}@eample.com" %>
+  password_digest: <%= User.digest('password') %>
+  
+<% end %>
