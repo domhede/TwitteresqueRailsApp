@@ -37,7 +37,7 @@ Rails.application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
   
-  config.action_mailer.delivery_method = :test
+
   host = "rails-tutorial-domhede.c9.io"
   config.action_mailer.default_url_options = { host: 'example.com' }
   
