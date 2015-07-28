@@ -1,14 +1,33 @@
-<div class="center jumbotron">  
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <sction class="user_info">
+        <%= render 'shared/user_info' %>
+      </sction>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3> Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+ 
 
-  <h1>Welocme to the Sample Home Page</h1>
+<% else %> 
+
+  <div class="center jumbotron">  
+    <h1>Welocme to the Sample Home Page</h1>
+    
+    <h2>The results of my efforts at Rails Development</h2>
+    
+    <%= link_to "Sign Up Now!", signup_path, class: "btn btn-large btn-primary" %>
+    <p>
+      This is the home page for the Ruby on Rials Tutorial
+    </p>
   
-  <h2>The results of my efforts at Rails Development</h2>
+  </div>
   
-  <%= link_to "Sign Up Now!", signup_path, class: "btn btn-large btn-primary" %>
-  <p>
-    This is the home page for the Ruby on Rials Tutorial
-  </p>
-
-</div>
-
-<%= link_to image_tag("rails.png", alt: 'Rails Logo'), '#' %>
+  <%= link_to image_tag("rails.png", alt: 'Rails Logo'), '#' %>
+<% end %>
