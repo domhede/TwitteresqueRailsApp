@@ -1,0 +1,12 @@
+one:
+  follower: dom
+  followed: lana
+two:
+  follower: dom
+  followed: mallory
+three:
+  follower: lana
+  followed: dom
+four:
+  follower: archer
+  followed: dom
